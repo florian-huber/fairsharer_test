@@ -10,7 +10,8 @@ jobs:
   My-first-CI:
     strategy:
      matrix:
-     os: [ubuntu-latest, windows-latest, macos-latest]
+     runs-on: [ubuntu-latest, windows-latest, macos-latest]
+     version: [latest]
     
     steps:
     - uses: actions/checkout@v3
