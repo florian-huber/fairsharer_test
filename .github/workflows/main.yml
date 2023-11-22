@@ -8,12 +8,10 @@ on:
 
 jobs:
   My-first-CI:
-    strategy:
-     matrix:
-     runs-on: [ubuntu-latest, windows-latest, macos-latest]
-     version: [latest]
+  
+    runs-on: [ubuntu-latest, windows-latest, macos-latest] 
     
-    steps:
+    steps: 
     - uses: actions/checkout@v3
     - name: Set up Python
       uses: actions/setup-python@v3
@@ -25,7 +23,7 @@ jobs:
         pip install -r requirements.txt
     - name: Lint with Ruff
       run: |
-        # ***add your command to run ruff here***
+        ruff lint
     - name: Test with pytest
       run: |
         pytest
