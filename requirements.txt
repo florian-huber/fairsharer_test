@@ -1,0 +1,3 @@
+# Bibliotheken für die Verwendung des Codes 
+ruff
+pytest
